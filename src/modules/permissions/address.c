@@ -94,17 +94,12 @@ int reload_address_insert(address_tables_group_t *atg, unsigned int gid,
 				LM_DBG("failure during IP mask check for v6\n");
 				return -1;
 			}
-			if(mask == 0) {
-				mask = 128;
-			}
 		} else {
 			if((int)mask<0 || mask>32) {
 				LM_DBG("failure during IP mask check for v4\n");
 				return -1;
 			}
-			if(mask == 0) {
-				mask = 32;
-			}
+
 		}
 	}
 
